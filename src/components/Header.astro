@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+---
+
+<header class="my-8 flex items-center justify-between md:my-10 lg:my-12">
+  <a href="/">
+    <Image
+      src="/shared/desktop/logo.svg"
+      width={236}
+      height={26}
+      alt="CoffeeRoasters Logo"
+    />
+  </a>
+  <ul
+    role="list"
+    class="hidden gap-4 text-xs font-bold uppercase text-grey tablet:flex"
+  >
+    <li class="hover:text-dark-grey-blue"><a href="/">Home</a></li>
+    <li class="hover:text-dark-grey-blue"><a href="/about">About Us</a></li>
+    <li class="hover:text-dark-grey-blue">
+      <a href="/create-plan">Create Your Plan</a>
+    </li>
+  </ul>
+  <Image
+    src="/shared/mobile/icon-hamburger.svg"
+    width={16}
+    height={15}
+    alt="menu-toggle"
+    class="tablet:hidden"
+  />
+</header>

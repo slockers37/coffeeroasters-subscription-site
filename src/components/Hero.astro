@@ -1,0 +1,42 @@
+---
+interface Props {
+  heroSectionName: string;
+  title: string;
+  desc: string;
+  image: string;
+  btnVisibility?: string;
+  variableHeight?: string;
+}
+
+const {
+  heroSectionName,
+  title,
+  desc,
+  image,
+  btnVisibility = "hidden",
+  variableHeight = "h-[25rem] desktop:h-[28rem]",
+} = Astro.props;
+---
+
+<section
+  class={`flex flex-col items-center justify-center mb-6 rounded-lg bg-cover text-center text-light-cream tablet:items-start ${image} ${variableHeight}`}
+  aria-label={heroSectionName}
+>
+  <div class="mx-6 tablet:ml-14 tablet:max-w-md desktop:ml-20 desktop:max-w-lg">
+    <h1
+      class="font-serif text-main-title-md tablet:text-left tablet:text-main-title-lg"
+    >
+      {title}
+    </h1>
+    <p class="mb-10 text-normal tablet:text-left">
+      {desc}
+    </p>
+    <a
+      href="/create-plan"
+      class={`mx-auto w-56 rounded-md bg-dark-cyan px-8 py-4 font-serif text-lg tablet:mx-0 ${btnVisibility}`}
+      aria-label="call to action button"
+    >
+      Create Your Plan
+    </a>
+  </div>
+</section>
