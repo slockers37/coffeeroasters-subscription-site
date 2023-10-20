@@ -1,6 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import Headquarter from "../components/Headquarter.astro";
 ---
 
 <Layout title="Welcome to CoffeeRoasters">
@@ -12,13 +14,20 @@ import Layout from "../layouts/Layout.astro";
       image="bg-right tablet:bg-center bg-hero-image-about-mobile tablet:bg-hero-image-about-tablet desktop:bg-hero-image-about-desktop"
     />
     <section
-      class="flex flex-col items-center justify-center gap-12 tablet:flex-row"
+      class="my-[7.5rem] flex flex-col items-center justify-center gap-12 tablet:flex-row"
     >
       <div
         aria-label="commitment image"
-        class="h-[25rem] w-full rounded-md bg-commitment-image-about-mobile bg-cover tablet:h-[29rem] tablet:w-2/5 tablet:bg-commitment-image-about-tablet desktop:h-[32.5rem] desktop:bg-commitment-image-about-desktop"
+        class="hidden h-[25rem] w-full rounded-md bg-commitment-image-about-mobile bg-cover bg-left bg-no-repeat tablet:h-[29rem] tablet:w-2/5 tablet:bg-commitment-image-about-tablet desktop:h-[32.5rem] desktop:bg-commitment-image-about-desktop"
       >
       </div>
+      <Image
+        src="/about/desktop/image-commitment.jpg"
+        alt="commitment image"
+        class="h-full w-full rounded-md tablet:w-1/3 desktop:w-1/2"
+        width={400}
+        height={400}
+      />
       <div class="inline-flex flex-col gap-8 tablet:w-3/5">
         <h2 class="font-serif text-title-md">Our commitment</h2>
         <p class="text-normal">
@@ -36,14 +45,64 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
     </section>
+    <section
+      class="relative mb-[7.5rem] inline-flex flex-col gap-8 rounded-md bg-dark-grey-blue px-6 py-16 text-center text-light-cream tablet:w-3/5"
+    >
+      <Image
+        src="/about/desktop/image-quality.jpg"
+        alt="Uncompromising quality image"
+        width="573"
+        height="320"
+      />
+      <h2 class="font-serif text-title-md">Uncompromising quality</h2>
+      <p class="text-normal">
+        Although we work with growers who pay close attention to all stages of
+        harvest and processing, we employ, on our end, a rigorous quality
+        control program to avoid over-roasting or baking the coffee dry. Every
+        bag of coffee is tagged with a roast date and batch number. Our goal is
+        to roast consistent, user-friendly coffee, so that brewing is easy and
+        enjoyable.
+      </p>
+    </section>
+    <section class="mb-[7.5rem]">
+      <h2 class="mb-16 text-center font-serif text-title-md text-grey">
+        Our headquarters
+      </h2>
+      <div class="flex flex-col gap-20 text-center">
+        <Headquarter
+          countryIllustration="/about/desktop/illustration-uk.svg"
+          alt="United Kingdom Illustration"
+          countryName="United Kingdom"
+          street="68 Asfordby Rd"
+          state="Alcaston"
+          extra="SY6 1YA"
+          phone="+44 1241 918425"
+          width={40.84208}
+          height={122.68}
+        />
+        <Headquarter
+          countryIllustration="/about/desktop/illustration-canada.svg"
+          alt="Canada Illustration"
+          countryName="Canada"
+          street="1528 Eglinton Avenue"
+          state="Toronto"
+          extra="Ontario M4P 1A6"
+          phone="+1 416 485 2997"
+          width={51.55904}
+          height={49.956}
+        />
+        <Headquarter
+          countryIllustration="/about/desktop/illustration-australia.svg"
+          alt="Australia Illustration"
+          countryName="Australia"
+          street="36 Swanston Street"
+          state="Kewell"
+          extra="Victoria"
+          phone="+61 4 9928 3629"
+          width={48.968}
+          height={43.94}
+        />
+      </div>
+    </section>
   </main>
-
-   Uncompromising quality Although we work with growers who pay close attention to
-  all stages of harvest and processing, we employ, on our end, a rigorous quality
-  control program to avoid over-roasting or baking the coffee dry. Every bag of coffee
-  is tagged with a roast date and batch number. Our goal is to roast consistent,
-  user-friendly coffee, so that brewing is easy and enjoyable. Our headquarters United
-  Kingdom 68 Asfordby Rd Alcaston SY6 1YA +44 1241 918425 Canada 1528 Eglinton Avenue
-  Toronto Ontario M4P 1A6 +1 416 485 2997 Australia 36 Swanston Street Kewell Victoria
-  +61 4 9928 3629 Home About us Create your plan
 </Layout>
