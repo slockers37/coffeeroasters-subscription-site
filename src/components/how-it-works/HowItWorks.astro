@@ -1,0 +1,30 @@
+---
+import Step from "./Step.astro";
+
+interface Props {
+  isCreatePage?: boolean;
+}
+
+const { isCreatePage = false } = Astro.props;
+---
+
+<div class="flex flex-col gap-14 tablet:flex-row tablet:gap-fluid-12-96">
+  <Step
+    isCreatePage={isCreatePage}
+    stepNumber="01"
+    stepName="Pick your coffee"
+    details="Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out."
+  />
+  <Step
+    isCreatePage={isCreatePage}
+    stepNumber="02"
+    stepName="Choose the frequency"
+    details="Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal."
+  />
+  <Step
+    isCreatePage={isCreatePage}
+    stepNumber="03"
+    stepName="Receive and enjoy!"
+    details="We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience."
+  />
+</div>

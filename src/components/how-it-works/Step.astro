@@ -1,0 +1,30 @@
+---
+interface Props {
+  stepNumber: string;
+  stepName: string;
+  details: string;
+  isCreatePage: boolean;
+}
+
+const { stepNumber, stepName, details, isCreatePage } = Astro.props;
+---
+
+<div
+  class="flex flex-col gap-6 text-center tablet:w-fluid-224-288 tablet:text-left"
+>
+  <h3 class="font-serif text-7xl text-pale-orange">{stepNumber}</h3>
+  <h4
+    class={`text-fluid-28-32 font-serif ${
+      isCreatePage ? "text-light-cream" : "text-dark-grey-blue"
+    }`}
+  >
+    {stepName}
+  </h4>
+  <p
+    class={`text-normal ${
+      isCreatePage ? "text-light-cream" : "text-dark-grey-blue"
+    }`}
+  >
+    {details}
+  </p>
+</div>

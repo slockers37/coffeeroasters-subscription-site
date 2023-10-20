@@ -24,6 +24,13 @@ export default {
         "main-title-lg": "clamp(3rem, 1.2857rem + 3.5714vw, 4.5rem)",
         normal: "clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem)",
         "title-md": "clamp(2rem, 1.5229rem + 2.0356vw, 2.5rem)",
+        "fluid-28-32": "clamp(1.75rem, 1.662rem + 0.3756vw, 2rem)",
+      },
+      gap: {
+        "fluid-12-96": "clamp(0.75rem, -5.25rem + 12.5vw, 6rem)",
+      },
+      width: {
+        "fluid-224-288": "clamp(14rem, 9.4286rem + 9.5238vw, 18rem)",
       },
       backgroundImage: {
         "hero-image-home-mobile":
