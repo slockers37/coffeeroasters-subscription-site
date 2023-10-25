@@ -1,6 +1,8 @@
 ---
-import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import OurCollection from "../components/our-collection/OurCollection.astro";
+import WhyChooseUs from "../components/why-choose-us/WhyChooseUs.astro";
 import HowItWorks from "../components/how-it-works/HowItWorks.astro";
 ---
 
@@ -14,8 +16,9 @@ import HowItWorks from "../components/how-it-works/HowItWorks.astro";
       btnVisibility="block"
       variableHeight="h-[32rem] desktop:h-[37.5rem]"
     />
-    <section class="my-36"></section>
-    <section class="mb-36">
+    <OurCollection />
+    <WhyChooseUs />
+    <section class="mb-36 mt-[38rem] tablet:mt-96 desktop:mt-80">
       <h2
         class="mb-20 text-center font-serif text-2xl text-grey tablet:text-left"
       >
@@ -24,7 +27,7 @@ import HowItWorks from "../components/how-it-works/HowItWorks.astro";
       <HowItWorks />
       <a
         href="/create-plan"
-        class="mx-auto mt-20 block w-56 rounded-md bg-dark-cyan px-8 py-4 font-serif text-lg text-light-cream tablet:mx-0"
+        class="mx-auto mt-20 block w-56 rounded-md bg-dark-cyan px-8 py-4 font-serif text-lg text-light-cream hover:bg-sea-serpent tablet:mx-0"
         aria-label="call to action button"
       >
         Create Your Plan

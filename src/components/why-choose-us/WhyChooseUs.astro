@@ -1,0 +1,42 @@
+---
+import ReasonCard from "./ReasonCard.astro";
+---
+
+<section
+  class="relative flex flex-col items-center justify-center rounded-[0.625rem] bg-outer-space text-center text-light-cream"
+>
+  <div
+    class="flex flex-col gap-6 px-6 pb-[38rem] pt-16 tablet:pb-96 desktop:pb-80"
+  >
+    <h2 class="font-serif text-fluid-28-32 tablet:text-fluid-32-40">
+      Why choose us?
+    </h2>
+    <p class="max-w-xl text-normal">
+      A large part of our role is choosing which particular coffees will be
+      featured in our range. This means working closely with the best coffee
+      growers to give you a more impactful experience on every level.
+    </p>
+  </div>
+  <div
+    class="absolute top-72 mx-6 grid grid-cols-1 justify-center gap-6 tablet:mx-14 desktop:mx-20 desktop:grid-cols-3 desktop:gap-8"
+  >
+    <ReasonCard
+      icon="/home/desktop/icon-coffee-bean.svg"
+      alt="coffee bean icon"
+      reason="Best quality"
+      details="Discover an endless variety of the world’s best artisan coffee from each of our roasters."
+    />
+    <ReasonCard
+      icon="/home/desktop/icon-gift.svg"
+      alt="gift icon"
+      reason="Exclusive benefits"
+      details="Special offers and swag when you subscribe, including 30% off your first shipment."
+    />
+    <ReasonCard
+      icon="/home/desktop/icon-truck.svg"
+      alt="truck icon"
+      reason="Free shipping"
+      details="We cover the cost and coffee is delivered fast. Peak freshness: guaranteed."
+    />
+  </div>
+</section>

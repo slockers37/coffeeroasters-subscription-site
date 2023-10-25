@@ -1,0 +1,39 @@
+---
+import Item from "./Item.astro";
+---
+
+<section class="my-36 flex flex-col items-center tablet:relative">
+  <h2
+    class="mb-10 bg-gradient-to-b from-grey to-light-cream bg-clip-text text-center font-serif text-fluid-48-128 lowercase text-transparent tablet:text-fluid-128-224"
+  >
+    Our Collection
+  </h2>
+  <div
+    class="grid grid-cols-1 gap-12 tablet:absolute tablet:top-28 desktop:grid-cols-4 desktop:gap-8"
+  >
+    <Item
+      itemImage="/home/desktop/image-gran-espresso.png"
+      itemAlt="Gran Espresso Image"
+      itemName="Gran Espresso"
+      itemDesc="Light and flavorful blend with cocoa and black pepper for an intense experience"
+    />
+    <Item
+      itemImage="/home/desktop/image-planalto.png"
+      itemAlt="Planalto Image"
+      itemName="Planalto"
+      itemDesc="Brazilian dark roast with rich and velvety body, and hints of fruits and nuts"
+    />
+    <Item
+      itemImage="/home/desktop/image-piccollo.png"
+      itemAlt="Piccollo Image"
+      itemName="Piccollo"
+      itemDesc="Mild and smooth blend featuring notes of toasted almond and dried cherry"
+    />
+    <Item
+      itemImage="/home/desktop/image-danche.png"
+      itemAlt="Danche Image"
+      itemName="Danche"
+      itemDesc="Ethiopian hand-harvested blend densely packed with vibrant fruit notes"
+    />
+  </div>
+</section>

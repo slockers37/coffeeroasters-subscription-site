@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  icon: string;
+  alt: string;
+  reason: string;
+  details: string;
+}
+
+const { icon, alt, reason, details } = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center justify-center gap-fluid-24-36 rounded-lg bg-dark-cyan px-8 py-16 text-center text-light-cream tablet:flex-row tablet:gap-fluid-36-72 tablet:px-20 tablet:py-10 tablet:text-left desktop:flex-col desktop:px-12 desktop:py-20 desktop:text-center"
+>
+  <Image src={icon} alt={alt} width={72} height={72} />
+  <div class="flex flex-col gap-fluid-16-24 tablet:gap-6">
+    <h3 class="font-serif text-2xl">{reason}</h3>
+    <p class="max-w-sm text-normal tablet:max-w-xs">
+      {details}
+    </p>
+  </div>
+</div>

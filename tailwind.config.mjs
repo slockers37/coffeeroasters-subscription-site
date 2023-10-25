@@ -13,6 +13,8 @@ export default {
       "light-cream": "#FEFCF7",
       grey: "#83888F",
       "outer-space": "#2C343E",
+      "sea-serpent": "#66D2CF",
+      transparent: "transparent",
     },
     fontFamily: {
       serif: "Fraunces, serif",
@@ -25,9 +27,15 @@ export default {
         normal: "clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem)",
         "title-md": "clamp(2rem, 1.5229rem + 2.0356vw, 2.5rem)",
         "fluid-28-32": "clamp(1.75rem, 1.662rem + 0.3756vw, 2rem)",
+        "fluid-32-40": "clamp(2rem, 1.4286rem + 1.1905vw, 2.5rem)",
+        "fluid-48-128": "clamp(3rem, -1.771rem + 18.3562vw, 8rem)",
+        "fluid-128-224": "clamp(8rem, 1.1429rem + 12.2857vw, 20rem)",
       },
       gap: {
         "fluid-12-96": "clamp(0.75rem, -5.25rem + 12.5vw, 6rem)",
+        "fluid-16-24": "clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem)",
+        "fluid-24-36": "clamp(1.5rem, 0.7844rem + 3.0534vw, 2.25rem)",
+        "fluid-36-72": "clamp(2.25rem, 0.1031rem + 9.1603vw, 4.5rem)",
       },
       width: {
         "fluid-224-288": "clamp(14rem, 9.4286rem + 9.5238vw, 18rem)",

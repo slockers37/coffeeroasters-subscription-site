@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  itemImage: string;
+  itemAlt: string;
+  itemName: string;
+  itemDesc: string;
+}
+
+const { itemImage, itemAlt, itemName, itemDesc } = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center justify-center gap-fluid-24-36 text-center text-dark-grey-blue tablet:flex-row tablet:gap-fluid-36-72 tablet:text-left desktop:flex-col desktop:text-center"
+>
+  <Image src={itemImage} alt={itemAlt} width={200} height={151} />
+  <div class="flex flex-col gap-fluid-16-24 tablet:gap-6">
+    <h3 class="font-serif text-2xl">{itemName}</h3>
+    <p class="max-w-xs text-normal">
+      {itemDesc}
+    </p>
+  </div>
+</div>
