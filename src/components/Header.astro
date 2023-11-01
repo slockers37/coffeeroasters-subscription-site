@@ -2,7 +2,9 @@
 import { Image } from "astro:assets";
 ---
 
-<header class="my-8 flex items-center justify-between md:my-10 lg:my-12">
+<header
+  class="my-8 flex items-center justify-between tablet:my-10 desktop:my-12"
+>
   <a href="/">
     <Image
       src="/shared/desktop/logo.svg"
@@ -26,6 +28,7 @@ import { Image } from "astro:assets";
     width={16}
     height={15}
     alt="menu-toggle"
-    class="tablet:hidden"
+    id="menu-open"
+    class="cursor-pointer tablet:hidden"
   />
 </header>

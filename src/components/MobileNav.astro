@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div id="mobile-nav" class="absolute left-0 top-0 z-10 hidden w-full flex-col px-6">
+  <header
+    id="header"
+    class="flex items-center justify-between bg-white py-8 tablet:py-10 desktop:py-12"
+  >
+    <a href="/">
+      <Image
+        src="/shared/desktop/logo.svg"
+        width={236}
+        height={26}
+        alt="CoffeeRoasters Logo"
+      />
+    </a>
+    <Image
+      src="/shared/mobile/icon-close.svg"
+      width={16}
+      height={15}
+      alt="menu-toggle"
+      id="menu-close"
+      class="cursor-pointer"
+    />
+  </header>
+  <ul
+    role="list"
+    class="flex h-[50rem] flex-col gap-8 bg-gradient-to-b from-white to-light-cream/70 pt-10 text-center font-serif text-2xl text-dark-grey-blue"
+  >
+    <li class="hover:text-dark-grey-blue"><a href="/">Home</a></li>
+    <li class="hover:text-dark-grey-blue"><a href="/about">About Us</a></li>
+    <li class="hover:text-dark-grey-blue">
+      <a href="/create-plan">Create Your Plan</a>
+    </li>
+  </ul>
+</div>
