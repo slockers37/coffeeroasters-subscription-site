@@ -1,6 +1,10 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import MobileNav from "@/components/MobileNav.astro";
+
+import "@/styles/globals.css";
+
 interface Props {
   title: string;
 }
@@ -30,9 +34,12 @@ const { title } = Astro.props;
   <body
     class="mx-auto block bg-light-cream px-6 font-sans tablet:px-10 desktop:px-20"
   >
-    <script src="../index.ts" defer></script>
-    <Header />
-    <slot />
-    <Footer />
+    <MobileNav />
+    <div>
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+    <script src="../index.ts"></script>
   </body>
 </html>
