@@ -1,6 +1,6 @@
 const Sidebar = () => {
   return (
-    <aside className="hidden w-64 desktop:block">
+    <aside className="hidden w-72 desktop:block">
       <ul className="divide-y-2 divide-grey font-serif text-2xl">
         {[
           "Preferences",
